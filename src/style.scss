@@ -1,0 +1,254 @@
+
+ body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Merienda', cursive;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  text-transform: uppercase;
+}
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 4px;
+}
+
+//-------------------------------HEADER STYLING--------------------------
+header {
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-direction: row;
+    a {
+      text-decoration: none;
+      color: palegoldenrod;
+    }
+  }
+}
+
+
+//------------------------------SORTED STYLING----------------------------------
+
+.houseWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30%;
+  margin: auto 35% auto 15%;
+  padding: 50px;
+  p {
+    font-size: 15px;
+  }
+}
+
+
+.Slytherin2 {
+  background-image: url("https://images.pottermore.com/bxd3o8b291gf/4U98maPA5aEUWcO8uOisOq/e01e17cc414b960380acbf8ace1dc1d5/PM_House_Pages_400_x_400_px_FINAL_CREST4.png?w=1200");
+  background-size: cover;
+  border-radius: 30%;
+  height: 100px;
+  width: 100px;
+}
+
+.Gryffindor2 {
+  background-image: url("https://images.pottermore.com/bxd3o8b291gf/49zkCzoZlekCmSq6OsycAm/da6278c1af372f18f8b6a71b226e0814/PM_House_Pages_400_x_400_px_FINAL_CREST2.png?w=1200");
+  background-size: cover;
+  border-radius: 30%;
+  height: 100px;
+  width: 100px;
+}
+
+.Ravenclaw2 {
+  background-image: url("https://images.pottermore.com/bxd3o8b291gf/5pnnQ5puTuywEEW06w2gSg/91abff3d923b4785ed79e9abda07bd07/PM_House_Pages_400_x_400_px_FINAL_CREST.png?w=1200");
+  background-size: cover;
+  border-radius: 30%;
+  height: 100px;
+  width: 100px;
+}
+
+.Hufflepuff2 {
+  background-image: url("https://images.pottermore.com/bxd3o8b291gf/2GyJvxXe40kkkG0suuqUkw/e1a64ec404cf5f19afe9053b9d375230/PM_House_Pages_400_x_400_px_FINAL_CREST3.png?w=1200");
+  background-size: cover;
+  border-radius: 30%;
+  height: 100px;
+  width: 100px;
+}
+
+
+
+
+
+//-----------------------HOME STYLING ------------------------------------------
+.home {
+  background-image: url("https://images8.alphacoders.com/760/760721.png");
+  background-size: cover;
+  height: 80vh;
+  color: palegoldenrod;
+  .sortingWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    margin: auto 35% auto 15%;
+    padding: 50px;
+      h1 {
+      margin: 0;
+    }
+  }
+}
+
+.sortingHat {
+  height: 300px;
+  width: 300px;
+  border-radius: 30%;
+}
+
+//-------------------------DISPLAY HOUSES STYLING-----------------------------
+.displayHouse {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+}
+  .Slytherin {
+    background-image: url('https://wallpaperfm.com/img/original/9/a/9/46869.jpg');
+    background-size: contain;
+  }
+  .Gryffindor {
+    background-image: url('https://images.alphacoders.com/556/556471.jpg');
+    background-size: contain;
+  }
+  .Ravenclaw {
+    background-image: url('https://wallpapermemory.com/uploads/556/ravenclaw-background-hd-2560x1440-463372.jpg');
+    background-size: contain;
+  }
+  .Hufflepuff {
+    background-image: url('https://wallpapercave.com/wp/wp1958756.jpg');
+    background-size: contain;
+  }
+
+
+.leftSide {
+  display: flex;
+  color: papayawhip;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  width: 40%;
+}
+
+.houseCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 300px;
+  width: 500px;
+  background-color: rgba(0,0,0, 0.4);
+  border: 1px solid black;
+  .houseValues {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    p {
+      font-size: 18px;
+      font-family: inherit;
+      margin: 0;
+    }
+  }
+  .houseDetails {
+    text-align: center;
+    height: 70%;
+
+    }
+  }
+
+
+.rightSide {
+  display: flex;
+  color: papayawhip;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 80vh;
+  overflow-y: scroll;
+  .characterCard {
+    border: 1px black solid;
+    height: 250px;
+    width: 350px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.3);
+    .characterGroups {
+      height: 40%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      .badgeBox {
+        height: 75px;
+        width: 75px;
+      }
+    }
+    .characterDetails {
+      flex-direction: column;
+      align-content: center;
+      padding: 10px;
+      height: 50%;
+
+    }
+  }
+}
+
+
+
+
+
+
+
+//---------------------------FOOTER STYLING ------------------------------------------
+footer {
+  color: palegoldenrod;
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  p {
+    color: inherit;
+  }
+}
+
+
+
+//---------------------- HIDDEN BADGES-------------------------------------------------
+.da {
+  background-image: url("https://ae01.alicdn.com/kf/HTB1N_f8KXXXXXbTXFXXq6xXFXXXs/Christmas-gift-Harry-Potter-Dumbledore-s-Army-Logo-Tattoo-For-Body-Painting-Nontoxic-And-Tasteless-Body.jpg_640x640.jpg");
+  background-size: cover;
+  border-radius: 25%;
+}
+
+.mom {
+  background-image: url("https://vignette.wikia.nocookie.net/harrypotter/images/7/7b/MinistryOfMagicLogo_-_Cursed_Child.svg/revision/latest/scale-to-width-down/350?cb=20170603214137");
+  background-size: cover;
+  border-radius: 25%;
+}
+
+.death {
+  background-image: url("https://res.cloudinary.com/teepublic/image/private/s--hH1qn3G0--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1453374525/production/designs/398246_2.jpg");
+  background-size: cover;
+  border-radius: 25%;
+}
+
+.otp {
+  background-image: url("https://ih0.redbubble.net/image.504300256.6896/raf,360x360,075,t,fafafa:ca443f4786.jpg");
+  background-size: cover;
+  border-radius: 25%;
+}
