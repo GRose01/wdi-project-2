@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DotEnv = require('dotenv-webpack')
-const env = process.env.NODE_ENV === 'development' ? (
+const env = process.env.NODE_ENV !== 'production' ? (
   new DotEnv()
 ) : (
   new webpack.EnvironmentPlugin({ ...process.env })
