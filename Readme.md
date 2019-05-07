@@ -1,124 +1,111 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Reacathon
+# General Assembly WDI Project 2: An API Reactathon
+[Portfolio Link](https://hpapi.herokuapp.com/)
 
-## Overview
+The Sorting Hat was a 2 day project to create an interactive webpage that consumes a public API. This was my first project involving the use of APIs, and did so using JavaScript and React. We created a webpage for Harry Potter fans. Use the sorting hat function to sort into a given house, where you can learn your house traits, details and get a character card of each of your fellow housemates.
 
-The second project is to **build a React application** that consumes a **public API**.
+---
 
-### Technical Requirements
+## Brief
 
-Your app must:
-
-* **Consume a public API** – this could be anything but it must make sense for your project.
+* **Build a React application** that consumes a **public API**.
 * **Have several components** - At least one classical and one functional.
 * **Include wireframes** - that you designed before building the app.
 * Have **semantically clean HTML** - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
-
----
-
-## Necessary Deliverables
-
-* A **working application**
 * A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
-* **A `readme.md` file** with:
-  * Explanations of the **technologies** used
-    * A couple of paragraphs about the **general approach you took**
-    * **Installation instructions** for any dependencies
-    * Link to your **wireframes** – sketches of major views / interfaces in your application
-   * Descriptions of any **unsolved problems** or **major hurdles** your team had to overcome
-
 ---
 
-## Suggested Ways to Get Started
+## Technologies Used:
 
-* **Don’t hesitate to write throwaway code** to solve short term problems.
-* **Read the docs for whatever technologies / frameworks / APIs you use**.
-* **Write DRY code**.
-* **Be consistent with your code style.**
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Keep user stories small and well-defined**, and remember – user stories focus on what a user needs, not what development tasks need accomplishing.
-* **Write code another developer wouldn't have to ask you about**. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-* **Make it all well-formatted.** Are you indenting, consistently? Can we find the start and end of every div, curly brace, etc?
-* **Comment your code.** Will someone understand what is going on in each block or function? Even if it's obvious, explaining the what & why means someone else can pick it up and get it.
-* **Write pseudocode before you write actual code.** Thinking through the logic of something helps.
-
----
-
-## Useful Resources
-
-* **[React](https://reactjs.org/)**
-* **[Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)**
-
----
-
-## Project Feedback + Evaluation
-
-* __Project Workflow__: Did you complete the user stories, wireframes, task tracking as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
-
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
-
-* __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a login button and an index page)?
-
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors as we have in class?
-
-* __Problem Solving__: Are you able to defend why you implemented your solution in a certain way? Can you demonstrated that you thought through alternative implementations? _(Note that this part of your feedback evaluation will take place during your one-on-one code review with your instructors, after you've completed the project.)_
-
----
-## Key concept
-**To create a Harry Potter inspired webpage.**
-_A webpage for the Harry Potter fans. Use the sorting hat function to sort into a given house, where you can learn your house traits, details and get a character card of each of your fellow housemates._
-
-
-### Wireframe image 
-![c4e1709d.png](attachments/c4e1709d.png) - chnage this to a screen shot of our home page, 
-and images of sorting ceremony & housepage
-
-
-### Deliverables
-* Simple functionality
-* Easy to use
-* Harry Potter themed
-* Hosted on github
-* Responsive 
-* Well written code
-* Refactored
-* Fully documented in a separate Read.me
-* Planned 
-* Clean written pseudo code and objectives of the project.
-* Wireframe
-
-### Technologies
+* JavaScript
 * React
+* HTML
+* CSS/ SASS
 * Webpack
-* Javascript
+* Yarn
 * API connections
-* Sass
 
-### Pages
-* Single page application
+## Approach Taken
 
-### Obstacles
-* General styling 
-* Lack of time
-* Extracting the required data from the API we have access too. 
+In a pair we created the Sorting Hat which used www.potterapi.com to pre-populate information pages specific to each Harry Potter house. We pair coded a lot of the initial set up, including creating the webpack and React components. Individually I worked on getting the information for each house and the displaying of the houses. We both worked on the styling using SASS. Throughout the project we communicated on task completions or problems and worked together to solve them.
 
+---
 
-### Key components 
-**Must haves**
-* Homepage
-* 4x house profiles
+## Screenshot Walk-through
 
-**Nice to have**
-* Sorting ceremony with redirection to page of generated house
+### Homepage
+![homepage](screenshots/homepage.png)
 
+### Once the sorting hat is clicked, your are given a randomised house
+![chosen house](screenshots/chosenHouse.png)
 
-### Tech theory behind the product. 
-Built in react using  a single API to populate the data in the webpage. Easy navigation. Styled in Sass.
+### House profile page
+![house profile](screenshots/houseProfile.png)
+___
 
+### Functionality
+The user clicks the sorting hat to randomly assign them a house. This redirects to the house homepage including information about and characters in that house.
 
-#### CSS
-* 
+### Process
+Once we decided the theme, we carried out the following to create our webpage, constantly testing through Insomnia.
 
-#### Installation instructions
-NPM instructions
+1. Created a webpack from scratch.
+2. Created wireframes for the app.
+3. Planning and pseudocoding.
+4. Created 4 individual pages to extract the information for each house from the external API using React to create necessary components.
+5. Site navigation, header, footer, etc.
+6. Styled using SASS.
 
+### Featured code 1
 
+This code shows how we used ```axios.all``` to obtain relevant information from the API in a way that we could use for separate features.
+
+```
+componentDidMount() {
+  axios.all([
+    axios.get(`https://www.potterapi.com/v1/sortingHat?key=${key}`),
+    axios.get(`https://www.potterapi.com/v1/houses?key=${key}`)
+  ])
+    .then(res => {
+      const sortedHouse = res[0].data
+      console.log(sortedHouse, 'sorted')
+      const houseDetails = res[1].data
+      this.setState({ sortedHouse, houseDetails })
+    })
+    .catch(err => console.log(err))
+}
+```
+
+### Featured code 2
+
+This code shows the display format of each character within the house. By mapping the house character pulled in from the API, we could display information how we wanted. The 'characterGroups' section used a ternary if operation to display an icon if the individual was in the relevant 4 groups or not.
+
+```
+<div className="rightSide">
+  {houseCharacters.map((houseCharacter, index) => (
+    <div key={index} className="characterCard">
+      <div className="characterDetails">
+        <h2>{houseCharacter.name}</h2>
+        <h4>{houseCharacter.role}</h4>
+        <h4>Blood Status: {houseCharacter.bloodStatus}</h4>
+      </div>
+      <div className="characterGroups">
+        <div className={`badgeBox ${houseCharacter.ministryOfMagic ? 'mom' : ''}`}> </div>
+        <div className={`badgeBox ${houseCharacter.orderOfThePhoenix ? 'otp' : ''}`}></div>
+        <div className={`badgeBox ${houseCharacter.dumbledoresArmy ? 'da' : ''}`}></div>
+        <div className={`badgeBox ${houseCharacter.deathEater ? 'death' : ''}`}></div>
+      </div>
+    </div>
+  ))}
+</div>
+```
+
+---
+
+## Future Features
+* Implementing a questionnaire to identify which house the user was in rather than a randomiser.
+
+---
+
+## Key Learnings
+
+This was a great chance to develop pair coding skills, and making sure we communicated sufficiently throughout to prevent conflicts within our work, this meant working with Git successfully through this as well. I also learned a lot about using public APIs and the benefit and restraints that come with them. I was please with the outcome, given the time restraint and novelty of the process we were working with.
