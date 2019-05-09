@@ -1,5 +1,5 @@
 # General Assembly WDI Project 2: An API Reactathon
-[Portfolio Link](https://hpapi.herokuapp.com/)
+[The Sorting Hat Link](https://hpapi.herokuapp.com/)
 
 The Sorting Hat was a 2 day project to create an interactive webpage that consumes a public API. This was my first project involving the use of APIs, and did so using JavaScript and React. We created a webpage for Harry Potter fans. Use the sorting hat function to sort into a given house, where you can learn your house traits, details and get a character card of each of your fellow housemates.
 
@@ -101,6 +101,15 @@ This code shows the display format of each character within the house. By mappin
 
 ---
 
+## Wins & Challenges
+
+For me the real win was successfully using a public API and extracting the information that was relevant for our project and rendering onto our page.
+this involved learning to pull in the data and sending the information into the DisplayHouse to be displayed on the page.
+
+Challenges included identifying the correct data when using the ```axios all``` command, and how to manipulate the data we stored in this.state.
+
+---
+
 ## Future Features
 * Implementing a questionnaire to identify which house the user was in rather than a randomiser.
 
@@ -108,4 +117,4 @@ This code shows the display format of each character within the house. By mappin
 
 ## Key Learnings
 
-This was a great chance to develop pair coding skills, and making sure we communicated sufficiently throughout to prevent conflicts within our work, this meant working with Git successfully through this as well. I also learned a lot about using public APIs and the benefit and restraints that come with them. I was please with the outcome, given the time restraint and novelty of the process we were working with.
+This was a great chance to develop pair coding skills, and making sure we communicated sufficiently throughout to prevent conflicts within our work, this meant working with Git successfully through this as well. I also learned a lot about using public APIs and the benefit and restraints that come with them. I was pleased with the outcome, given the time restraint and novelty of the process we were working with.
